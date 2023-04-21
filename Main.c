@@ -1,18 +1,21 @@
 #include <stdio.h>
 #include <string.h>
 
-typedef struct student
+typedef struct vector
 {
-    int id;
-    char name[50];
-    float cgpa;
-} paiyan;
+    int x;
+    int y;
+} v;
 
 int main()
 {
     system("cls");
-    paiyan s = {21, "Charan Vignesh", 8.768};
-    paiyan *ptr = &s;
-    printf("%.2f", ptr->cgpa);
+    v v1 = {5, 6};
+    v v2 = {7, 8};
+    int resX = v1.x + v2.x;
+    int resY = v1.y + v2.y;
+    printf("  %d i + %d j\n+", v1.x, v1.y);
+    printf(" %d i + %d j\n=", v2.x, v2.y);
+    printf("%d i + %d j\n", resX, resY);
     return 0;
 }
