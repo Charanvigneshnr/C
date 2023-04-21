@@ -20,5 +20,7 @@ int main()
     {
         printf("Number %d: %.2f\n", i + 1, ptr[i]);
     }
+    free(ptr);
+    printf("%d", sizeof(ptr));
     return 0;
 }
