@@ -1,21 +1,24 @@
 #include <stdio.h>
 #include <string.h>
-
-typedef struct vector
-{
-    int x;
-    int y;
-} v;
-
+#include <stdlib.h>
 int main()
 {
     system("cls");
-    v v1 = {5, 6};
-    v v2 = {7, 8};
-    int resX = v1.x + v2.x;
-    int resY = v1.y + v2.y;
-    printf("  %d i + %d j\n+", v1.x, v1.y);
-    printf(" %d i + %d j\n=", v2.x, v2.y);
-    printf("%d i + %d j\n", resX, resY);
+    int x;
+    printf("Enter the number of rows: ");
+    scanf("%d", &x);
+    int i;
+    float *ptr = (float *)calloc(sizeof(float) * x, 0.00);
+    printf("\n");
+    for (i = 0; i < x; i++)
+    {
+        printf("Enter the %dth element: ", i + 1);
+        scanf("%f", &ptr[i]);
+    }
+    printf("\n");
+    for (i = 0; i < x; i++)
+    {
+        printf("Number %d: %.2f\n", i + 1, ptr[i]);
+    }
     return 0;
 }
